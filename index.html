@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLEV Media – Werbeagentur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing:border-box; }
+    
+    body {
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:#fff;
+      color:#111;
+      scroll-behavior:smooth;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      position:sticky;
+      top:0;
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(15px);
+      -webkit-backdrop-filter:blur(15px);
+      padding:20px;
+      text-align:center;
+      z-index:1000;
+      border-bottom:1px solid rgba(0,0,0,0.05);
+    }
+    nav { margin-top: 15px; }
+    nav a {
+      color:#111;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    nav a:hover { color:#FE4747; }
+
+    /* HERO */
+    .hero {
+      background:#082C5D;
+      color:#fff;
+      padding:180px 20px;
+      text-align:center;
+    }
+    .hero h1 { 
+      font-size:clamp(40px, 8vw, 65px); 
+      margin-bottom:10px; 
+      font-weight: 800;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: reveal 1s forwards ease-out;
+    }
+    .hero p { 
+      font-size: 1.2rem; 
+      color: #ccc; 
+      max-width: 700px; 
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: reveal 1s forwards 0.3s ease-out;
+    }
+
+    @keyframes reveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SCROLL ANIMATION */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.9s ease-out;
+    }
+    .reveal-item.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* TEXT SECTIONS */
+    .text-section { padding: 100px 20px; text-align: center; }
+    .bg-light { background: #fdfdfd; }
+    .bg-white { background: #fff; border-top: 1px solid #f0f0f0; }
+    .content-container { max-width: 900px; margin: 0 auto; }
+    
+    h2 { font-size: 2.2rem; margin-bottom: 30px; position: relative; }
+    h2::after {
+      content: "";
+      width: 40px;
+      height: 4px;
+      background: #FE4747;
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .text-section p { font-size: 1.2rem; line-height: 1.8; color: #333; }
+
+    /* PAKETE */
+    .dark-bg { background:#082C5D; color:#fff; width: 100%; padding: 100px 0; }
+    .section-container { max-width: 1100px; margin: auto; padding: 0 20px; }
+    
+    .cards { 
+      display:grid; 
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); 
+      gap:30px; 
+      margin-top:60px; 
+    }
+
+    .card { 
+      background:#fff; 
+      border-radius:20px; 
+      padding:50px 30px; 
+      text-align: center; 
+      color: #111; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .card:hover { 
+      transform: translateY(-15px); 
+      box-shadow: 0 20px 50px rgba(254,71,71,0.3);
+    }
+
+    .card h3 { color: #FE4747; margin: 0; font-size: 1.4rem; letter-spacing: 1px; }
+    .card .price { font-size: 1.8rem; font-weight: 800; display: block; margin: 15px 0; color: #082C5D; }
+    .card .sub-price { font-size: 1rem; color: #666; font-weight: 400; }
+
+    /* KONTAKT */
+    .contact-box { 
+      text-align: center; 
+      padding: 60px 20px; 
+      background: rgba(255,255,255,0.03); 
+      border-radius: 30px; 
+      margin-top: 40px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .contact-link { 
+      color: #fff; 
+      text-decoration: none; 
+      font-size: 1.3rem; 
+      display: block; 
+      margin: 15px 0; 
+      transition: 0.3s;
+      font-weight: 600;
+    }
+    .contact-link:hover { color: #FE4747; transform: scale(1.05); }
+
+    footer { background:#051a38; color:#666; text-align:center; padding:50px 20px; font-size: 13px; }
+    .insta-link { color: #fff; text-decoration: none; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; margin-bottom: 20px; }
+    .insta-link:hover { color: #FE4747; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.PNG" alt="BLEV Media Logo" style="height:100px; width:auto;">
+  
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#vision">Vision</a>
+    <a href="#story">Geschichte</a>
+    <a href="#products">Produkte</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>BLEV Media</h1>
+  <p>Eure lokale Werbeagentur für High-End Content.</p>
+</section>
+
+<section id="vision" class="text-section bg-light">
+  <div class="content-container reveal-item">
+    <h2>Unsere Vision</h2>
+    <p>
+      Lokale Unternehmen verpassen oft den Anschluss an Social Media – genau hier setzt <strong>BLEV</strong> an. 
+      Wir bieten High-End Content für den Mittelstand und verbinden Kino-Qualität mit KI-gestützter Effizienz.
+    </p>
+  </div>
+</section>
+
+<section id="story" class="text-section bg-white">
+  <div class="content-container reveal-item">
+    <h2>Unsere Geschichte</h2>
+    <p>
+      Wir sind ein kleines Startup-Unternehmen mit einem kreativen Team von nur vier Personen. 
+      Wir entwerfen Marketingstrategien und kundenspezifische Werbekampagnen, um die Marken unserer Kunden zu unterstützen. 
+      Mit unseren frischen Ideen und unserer persönlichen Hingabe versuchen wir, die Erwartungen nicht nur zu erfüllen, 
+      sondern zu übertreffen und ihr Publikum wirklich zu erreichen.
+    </p>
+  </div>
+</section>
+
+<div class="dark-bg">
+  <div class="section-container">
+    <div id="products" class="reveal-item">
+      <h2 style="text-align:center; font-size: 2.5rem; color: white;">Unsere Pakete</h2>
+      <div class="cards">
+        
+        <div class="card reveal-item">
+          <h3>BASIC</h3>
+          <span class="price">ab 499€</span>
+          <p class="sub-price">pro Monat</p>
+          <hr style="opacity: 0.1; margin: 20px 0;">
+          <p>Social Media Content</p>
+        </div>
+
+        <div class="card reveal-item">
+          <h3>PRO</h3>
+          <span class="price">ab 699€</span>
+          <p class="sub-price">pro Monat</p>
+          <hr style="opacity: 0.1; margin: 20px 0;">
+          <p>Imagefilme</p>
+        </div>
+
+        <div class="card reveal-item">
+          <h3>CONNECT</h3>
+          <span class="price">ab 899€</span>
+          <p class="sub-price">pro Monat</p>
+          <hr style="opacity: 0.1; margin: 20px 0;">
+          <p>Employer Branding</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dark-bg" style="background: #051a38;">
+  <div class="section-container">
+    <section id="contact" class="reveal-item">
+      <h2 style="text-align:center; font-size: 2.5rem; color: white;">Let's Talk Business</h2>
+      <div class="contact-box">
+        <a href="mailto:blevsocial.media@gmail.com" class="contact-link">📧 blevsocial.media@gmail.com</a>
+        <a href="tel:+4915121681581" class="contact-link">📞 +49 1512 1681581</a>
+        <p style="margin-top: 30px; opacity: 0.5; letter-spacing: 1px;">HEILBRONN • DEUTSCHLAND</p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <a href="https://www.instagram.com/blevmedia" target="_blank" class="insta-link">
+      📸 Instagram <strong>@blevmedia</strong>
+    </a>
+  </div>
+  <p>© 2026 BLEV Media</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal-item').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
